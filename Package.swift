@@ -45,7 +45,10 @@ let package = Package(
             dependencies: [
                 "CheckoutEventLoggerKit",
             ],
-            path: "Checkout/Checkout/Source"
+            path: "Checkout/Checkout/Source",
+            swiftSettings: [
+                .unsafeFlags(["-enable-testing"])
+            ]
         ),
         .testTarget(
             name: "CheckoutTests",
